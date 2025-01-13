@@ -1,6 +1,5 @@
-// main.js
 // Using NewsAPI
-const API_KEY = '15ba08a3a4ea451791a25c211864f080'; // Free API key for testing
+const API_KEY = 'ad85e3f66a074ce5ba7c4b0a8ed434c3'; // Free API key for testing
 const BASE_URL = 'https://newsapi.org/v2';
 
 let currentCategory = 'top';
@@ -27,13 +26,13 @@ async function fetchNews(category) {
         const endpoint = category === 'top' ? 'top-headlines' : 'everything';
         const params = category === 'top'
             ? 'country=us'
-            : q=${category}&language=en;
+            : `q=${category}&language=en`;
 
-        const url = ${BASE_URL}/${endpoint}?${params}&apiKey=${API_KEY};
+        const url = `${BASE_URL}/${endpoint}?${params}&apiKey=${API_KEY}`;
 
         const response = await fetch(url, {
             headers: {
-                'Authorization': Bearer ${API_KEY}
+                'Authorization': `Bearer ${API_KEY}`
             }
         });
 
