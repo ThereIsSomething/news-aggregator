@@ -1,12 +1,12 @@
-// Using NewsAPI
-const API_KEY = 'ad85e3f66a074ce5ba7c4b0a8ed434c3'; // Free API key for testing
+
+const API_KEY = 'ad85e3f66a074ce5ba7c4b0a8ed434c3';
 const BASE_URL = 'https://newsapi.org/v2';
 
 let currentCategory = 'top';
 let currentArticles = [];
 let savedArticles = JSON.parse(localStorage.getItem('savedArticles')) || [];
 
-// Event Listeners
+
 document.addEventListener('DOMContentLoaded', () => {
     fetchNews(currentCategory);
     renderSavedArticles();
